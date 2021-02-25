@@ -1,3 +1,3 @@
 export function isStrongPassword(password: string) {
-	return true;
+	return password.length >= 6;
 }
