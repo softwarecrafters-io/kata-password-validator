@@ -24,4 +24,7 @@ describe('The password strength validator', () => {
 	it('fails when the password is missing an uppercase', () => {
 		expect(isStrongPassword('1234abcd_')).toBe(false);
 	});
+	it('fails when the password is missing an underscore', () => {
+		expect(isStrongPassword('1234abcdABCD')).toBe(false);
+	});
 });
