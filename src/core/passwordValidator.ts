@@ -1,5 +1,5 @@
 export function isStrongPassword(password: string) {
-	return hasSixCharactersOrMore(password) && containsNumber(password) && /.*[a-z].*/.test(password);
+	return hasSixCharactersOrMore(password) && containsNumber(password) && constainsLowerCase(password);
 }
 
 function hasSixCharactersOrMore(password: string) {
@@ -8,4 +8,8 @@ function hasSixCharactersOrMore(password: string) {
 
 function containsNumber(password: string) {
 	return /.*\d.*/.test(password);
+}
+
+function constainsLowerCase(password: string) {
+	return /.*[a-z].*/.test(password);
 }
