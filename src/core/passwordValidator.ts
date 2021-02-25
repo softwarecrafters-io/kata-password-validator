@@ -1,5 +1,5 @@
 export function isStrongPassword(password: string) {
-	return hasSixCharactersOrMore(password) && containsNumber(password);
+	return hasSixCharactersOrMore(password) && containsNumber(password) && /.*[a-z].*/.test(password);
 }
 
 function hasSixCharactersOrMore(password: string) {
